@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  ocserv:
+    image: tommylau/ocserv
+    ports:
+      - 443:443/tcp

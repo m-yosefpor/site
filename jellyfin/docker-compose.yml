@@ -1,0 +1,11 @@
+version: "3"  
+services:  
+    jellyfin:  
+      image: jellyfin/jellyfin  
+#      network_mode: "host"  
+      volumes:  
+        - ./config:/config  
+        - ./cache:/cache  
+        - ./media:/media  
+      ports:
+        - 8096:8096

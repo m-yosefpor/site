@@ -1,0 +1,2 @@
+s tcpdump -i eth0 -s0 -nnnn -vvv not port 80 -w yosefpor.pcap
+

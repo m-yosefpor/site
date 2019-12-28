@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  vsftpd:
+    image: fauria/vsftpd
+    volumes:
+      - ./data:/home/vsftpd
+    ports:
+      - 20-21:20-21
+      - 21100-21110:21100-21110
+    environment:
+      - FTP_USER=mm
+      - FTP_PASS=maflok
+      - PASV_ADDRESS=193.176.242.153
+      - PASV_MIN_PORT=21100
+      - PASV_MAX_PORT=21110

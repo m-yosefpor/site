@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo docker exec -ti ocserv_ocserv_1 ocpasswd -c /etc/ocserv/ocpasswd -d $1

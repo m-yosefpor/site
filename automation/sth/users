@@ -1,0 +1,11 @@
+export MYNAME=dnothertest
+export MYUSERNAME=dnothertest
+export MYPASS=is6primeOrN
+
+
+echo "\n######################### rocketchat #####################\n"
+bash ./rocketchat_register
+#echo "\n######################### nextcloud #####################\n"
+#bash ./nextcloud_register
+#echo "\n######################### calibre-web #####################\n"
+#bash ./calibre-web_register

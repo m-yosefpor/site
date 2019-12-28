@@ -1,0 +1,9 @@
+version: '2'
+services:
+  nextcloud:
+    image: nextcloud
+    ports:
+      - 8090:80
+    volumes:
+      - ./config:/var/www/html/config
+      - ./custom_apps:/var/www/html/custom_apps

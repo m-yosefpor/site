@@ -1,0 +1,19 @@
+dc up -d
+
+http://yosefpor.com:8080/v1/_setup
+
+
+copy secret ; SAVE IT
+
+(On docker host)
+$ npm install -g para-cli
+# run setup and enter the keys for the root app and endpoint 'http://localhost:8080'
+$ para-cli setup
+$ para-cli ping
+$ para-cli new-app "scoold" --name "Scoold"
+
+
+SAVE secret key
+
+
+then change params in scoold-application.conf , the secret , and the host_url: yosefpr.com:8000 , BUT para server : IP:8080
