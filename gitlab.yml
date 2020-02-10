@@ -4,7 +4,9 @@ services:
   gitlab:
     image: gitlab/gitlab-ce:latest
     volumes:
-    - gitlab-data:/var/opt/gitlab
+    - gitlab-data:/var/opt/gitlab:Z
+    - gitlab-log:/var/log/gitlab:Z
+    - gitlab-config:/etc/gitlab:Z
     ports:
     - 8001:80
     - 443:443
@@ -17,3 +19,5 @@ services:
 #####################
 volumes:
   gitlab-data:
+  gitlab-log:
+  gitlab-config:
