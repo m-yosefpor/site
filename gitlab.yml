@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    volumes:
+    - gitlab-data:/var/opt/gitlab
+    ports:
+    - 8001:80
+    - 443:443
+    - 1022:22
+    hostname: 193.176.242.153.8001
+
+
+
+
+#####################
+volumes:
+  gitlab-data:

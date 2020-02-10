@@ -6,7 +6,7 @@ services:
     command: bash -c 'for i in `seq 1 30`; do node main.js && s=$$? && break || s=$$?; echo "Tried $$i times. Waiting 5 secs..."; sleep 5; done; (exit $$s)'
     restart: unless-stopped
     volumes:
-      - ./uploads:/app/uploads
+      - rocketchat_data:/app/uploads
     environment:
       - PORT=3000
       - ROOT_URL=http://193.176.242.153:3000
@@ -22,7 +22,7 @@ services:
     image: mongo:4.0
     restart: unless-stopped
     volumes:
-     - ./data/db:/data/db
+     - rocketchat-mongo_data:/data/db
      - ./data/dump:/dump
     command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
 
@@ -53,3 +53,7 @@ services:
   # this is used to expose the hubot port for notifications on the host on port 3001, e.g. for hubot-jenkins-notifier
 #    ports:
 #      - 3001:8080
+
+volumes:
+  rocketchat_data:
+  rocketchat-mongo_data:
