@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.3"
 services:
 
   gitlab:
@@ -11,7 +11,7 @@ services:
     - 8001:80
     - 443:443
     - 1022:22
-    hostname: 193.176.242.153.8001
+    hostname: 10.12.7.60.8001
 
 
 
