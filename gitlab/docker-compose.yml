@@ -12,6 +12,7 @@ services:
     - 443:443
     - 1022:22
     hostname: 10.12.7.60.8001
+    restart: unless-stopped
 
 
 

@@ -1,0 +1,23 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{1361:function(t,e,n){"use strict";n.r(e);var r=n(749),o=n.n(r),i=n(659),d=n.n(i),s=n(666),a=n.n(s),_=n(665),l={name:"KeyboardShortcuts",components:{AppContent:o.a,AppContentDetails:d.a,Content:a.a,Navigation:_.a}},u=n(35),v=Object(u.a)(l,(function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("Content",{attrs:{"app-name":"mail"}},[n("Navigation"),t._v(" "),n("AppContent",[n("AppContentDetails",[n("h2",[t._v(t._s(t.t("mail","Keyboard shortcuts")))]),t._v(" "),n("p",[t._v(t._s(t.t("mail","Speed up your Mail experience with these quick shortcuts.")))]),t._v(" "),n("dl",[n("div",[n("dt",[n("kbd",[t._v("C")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Compose new message")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("←")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Newer message")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("→")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Older message")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("S")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Toggle star")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("U")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Toggle unread")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("Del")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Delete")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("Ctrl")]),t._v(" + "),n("kbd",[t._v("F")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Search")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("Ctrl")]),t._v(" + "),n("kbd",[t._v("Enter")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Send")))])]),t._v(" "),n("div",[n("dt",[n("kbd",[t._v("R")])]),t._v(" "),n("dd",[t._v(t._s(t.t("mail","Refresh")))])])])])],1)],1)}),[],!1,null,null,null);e.default=v.exports},659:function(t,e,n){window,t.exports=function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/dist/",n(n.s=161)}({0:function(t,e,n){"use strict";function r(t,e,n,r,o,i,d,s){var a,_="function"==typeof t?t.options:t;if(e&&(_.render=e,_.staticRenderFns=n,_._compiled=!0),r&&(_.functional=!0),i&&(_._scopeId="data-v-"+i),d?(a=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),o&&o.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(d)},_._ssrRegister=a):o&&(a=s?function(){o.call(this,this.$root.$options.shadowRoot)}:o),a)if(_.functional){_._injectStyles=a;var l=_.render;_.render=function(t,e){return a.call(e),l(t,e)}}else{var u=_.beforeCreate;_.beforeCreate=u?[].concat(u,a):[a]}return{exports:t,options:_}}n.d(e,"a",(function(){return r}))},161:function(t,e,n){"use strict";n.r(e);var r=n(0),o=Object(r.a)({name:"AppContentDetails"},(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"app-content-details"},[this._t("default")],2)}),[],!1,null,null,null).exports;n.d(e,"AppContentDetails",(function(){return o})),
+/*
+ * @copyright 2019 Christoph Wurst <christoph@winzerhof-wurst.at>
+ *
+ * @author 2019 Christoph Wurst <christoph@winzerhof-wurst.at>
+ *
+ * @license GNU AGPL version 3 or any later version
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+e.default=o}})}}]);
+//# sourceMappingURL=mail.13.050c00463b290e6e2657.js.map
