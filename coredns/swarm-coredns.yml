@@ -1,0 +1,56 @@
+version: "3.7"
+
+services:
+
+  coredns:
+    image: coredns/coredns:latest
+    configs:
+    - source: coredns-conf
+      target: /root/Corefile
+    - source: corednsdb-conf
+      target: /root/db.my
+    ports:
+    - 53:53/udp
+    - 53:53/tcp
+    networks:
+    - proxy_net
+    command: '-conf /root/Corefile'
+    logging:
+      driver: fluentd
+      options:
+        tag: docker.ci.coredns
+        fluentd-async-connect: "true"
+    deploy:
+      mode: replicated
+      replicas: 1
+
+  nginx:
+    image: nginx
+    ports:
+    - 80:80
+    configs:
+    - source: nginx-conf
+      target: /etc/nginx/nginx.conf
+    networks:
+    - proxy_net
+    logging:
+      driver: fluentd
+      options:
+        tag: docker.ci.nginx
+        fluentd-async-connect: "true"
+    deploy:
+      mode: replicated
+      replicas: 1
+
+##################################################
+configs:
+  coredns-conf:
+    file: ./coredns-Corefile.conf
+  corednsdb-conf:
+    file: ./coredns-db.conf
+  nginx-conf:
+    file: ./nginx.conf
+
+networks:
+  proxy_net:
+    external: true

@@ -1,0 +1,3 @@
+io.                 IN  SOA dns.io. yosefpor.io. 2019082553 7200 3600 1209600 3600
+dns.io.             IN  A   127.0.0.1
+*.io.               IN  A   144.76.233.147
