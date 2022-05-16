@@ -1,0 +1,11 @@
+server {
+    listen       80;
+    server_name  git.yosefpor.com;
+
+    location / {
+      proxy_pass   http://yosefpor.com:8001;
+    }
+
+
+}
+
