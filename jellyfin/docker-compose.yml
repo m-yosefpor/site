@@ -1,11 +1,13 @@
-version: "3"  
-services:  
-    jellyfin:  
-      image: jellyfin/jellyfin  
-#      network_mode: "host"  
-      volumes:  
-        - ./config:/config  
-        - ./cache:/cache  
-        - ./media:/media  
-      ports:
-        - 8096:8096
+version: "3.5"
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:10.8.0-beta3
+    container_name: jellyfin
+    user: uid:gid
+    network_mode: "host"
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - ./media:/media
+      - ./media2:/media2:ro
+    restart: "unless-stopped"
