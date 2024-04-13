@@ -1,9 +1,9 @@
-version: '3'
+version: "3"
 
 services:
   nginx:
     image: nginx
     volumes:
-      - ./data:/usr/share/nginx/data:ro
-      - ./conf:/etc/nginx/conf.d
+      - ./data:/usr/share/nginx/html:ro
+      - ./conf:/etc/nginx/conf.d:ro
     network_mode: "host"

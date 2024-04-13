@@ -1,2 +1,2 @@
-curl -X POST http://yosefpor:jox3niedN@drive.yosefpor.com/ocs/v1.php/cloud/users -H "OCS-APIRequest: true" -d userid="$MYUSERNAME" -d password="$MYPASS" -d groups[]="users"
-curl -X PUT http://yosefpor:jox3niedN@drive.yosefpor.com/ocs/v1.php/cloud/users/$MYUSERNAME  -H "OCS-APIRequest: true" -d key="quota" -d value="1GB"
+curl -X POST http://yosefpor:jox3niedN@drive.matmowitch.com/ocs/v1.php/cloud/users -H "OCS-APIRequest: true" -d userid="$MYUSERNAME" -d password="$MYPASS" -d groups[]="users"
+curl -X PUT http://yosefpor:jox3niedN@drive.matmowitch.com/ocs/v1.php/cloud/users/$MYUSERNAME  -H "OCS-APIRequest: true" -d key="quota" -d value="1GB"

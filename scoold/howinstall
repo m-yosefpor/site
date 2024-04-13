@@ -1,6 +1,6 @@
 dc up -d
 
-http://yosefpor.com:8080/v1/_setup
+http://matmowitch.com:8080/v1/_setup
 
 
 copy secret ; SAVE IT

@@ -1,1 +1,1 @@
-curl -H "Content-type:application/json" http://yosefpor.com:3000/api/v1/users.register -d $(echo \'{ "username":"$MYUSERNAME",  "email":"$MYUSERNAME@yosefpor.com",  "pass":"$MYPASS", "name":"$MYNAME" }\')
+curl -H "Content-type:application/json" http://matmowitch.com:3000/api/v1/users.register -d $(echo \'{ "username":"$MYUSERNAME",  "email":"$MYUSERNAME@matmowitch.com",  "pass":"$MYPASS", "name":"$MYNAME" }\')

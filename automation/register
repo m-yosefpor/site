@@ -15,32 +15,32 @@ import shlex, subprocess, sys
 user = sys.argv[1]
 passwd= sys.argv[2]
 name=user
-email= name + '@yosefpor.com'
+email= name + '@matmowitch.com'
 
 
 print('######################## rocketchat ########################')
-command = ['curl', '-H', 'Content-type:application/json' , 'http://yosefpor.com:3000/api/v1/users.register' , '-d',  '{' + f' "username":"{user}",  "email":"{email}",  "pass":"{passwd}", "name":"{name}" , "secretURL":"{key_rocketchat}"' + '}']
+command = ['curl', '-H', 'Content-type:application/json' , 'http://matmowitch.com:3000/api/v1/users.register' , '-d',  '{' + f' "username":"{user}",  "email":"{email}",  "pass":"{passwd}", "name":"{name}" , "secretURL":"{key_rocketchat}"' + '}']
 process = subprocess.Popen(command).wait()
 
 
 print('######################## nextcloud ########################')
 ## register
-command=['curl', '-X', 'POST', f'http://{key_nextcloud[0]}:{key_nextcloud[1]}@drive.yosefpor.com/ocs/v1.php/cloud/users', '-H', 'OCS-APIRequest: true', '-d' , f'userid={user}', '-d', f'password={passwd}', '-d', 'groups[]=users']
+command=['curl', '-X', 'POST', f'http://{key_nextcloud[0]}:{key_nextcloud[1]}@drive.matmowitch.com/ocs/v1.php/cloud/users', '-H', 'OCS-APIRequest: true', '-d' , f'userid={user}', '-d', f'password={passwd}', '-d', 'groups[]=users']
 process = subprocess.Popen(command).wait()
 
 ## quota
-command =[ 'curl' , '-X' , 'PUT' , f'http://{key_nextcloud[0]}:{key_nextcloud[1]}@drive.yosefpor.com/ocs/v1.php/cloud/users/{user}',  '-H', 'OCS-APIRequest: true' , '-d' ,'key=quota', '-d' , 'value=1GB']
+command =[ 'curl' , '-X' , 'PUT' , f'http://{key_nextcloud[0]}:{key_nextcloud[1]}@drive.matmowitch.com/ocs/v1.php/cloud/users/{user}',  '-H', 'OCS-APIRequest: true' , '-d' ,'key=quota', '-d' , 'value=1GB']
 process = subprocess.Popen(command).wait()
 
 print('######################## calibre-web ########################')
-command= ['curl' , '-X' , 'POST' ,f'http://{key_calibre[0]}:{key_calibre[1]}@books.yosefpor.com/admin/user/new', '-d' , f'nickname={user}' , '-d' , f'email={email}' , '-d' , f'password={passwd}' , '-d' , 'kindle_mail=""' , '-d' , 'default_language=all' , '-d', 'show_random=on' , '-d' , 'show_recent=on', '-d' , 'show_sorted=on' , '-d' , 'show_hot=on' , '-d', 'show_best_rated=on' , '-d' , 'show_language=on' , '-d' , 'show_series=on' , '-d',  'show_category=on', '-d', 'show_author=on' , '-d' , 'show_publisher=on' , '-d',  'show_read_and_unread=on', '-d', 'show_detail_random=on', '-d', 'download_role=on']
+command= ['curl' , '-X' , 'POST' ,f'http://{key_calibre[0]}:{key_calibre[1]}@books.matmowitch.com/admin/user/new', '-d' , f'nickname={user}' , '-d' , f'email={email}' , '-d' , f'password={passwd}' , '-d' , 'kindle_mail=""' , '-d' , 'default_language=all' , '-d', 'show_random=on' , '-d' , 'show_recent=on', '-d' , 'show_sorted=on' , '-d' , 'show_hot=on' , '-d', 'show_best_rated=on' , '-d' , 'show_language=on' , '-d' , 'show_series=on' , '-d',  'show_category=on', '-d', 'show_author=on' , '-d' , 'show_publisher=on' , '-d',  'show_read_and_unread=on', '-d', 'show_detail_random=on', '-d', 'download_role=on']
 
 process = subprocess.Popen(command).wait()
 
 
 print('######################## emby ########################')
 ## register
-command= [ 'curl', '-H', 'Content-Type: application/json' , f'http://media.yosefpor.com/emby/Users/New?api_key={key_emby}' , '-d' , '{ '+ f'"Name" : "{user}"' +' }' ]
+command= [ 'curl', '-H', 'Content-Type: application/json' , f'http://media.matmowitch.com/emby/Users/New?api_key={key_emby}' , '-d' , '{ '+ f'"Name" : "{user}"' +' }' ]
 (stdout , stderr)  = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
 std =stdout.decode()
 #print(std)
@@ -49,17 +49,16 @@ userid= tmpstd[ : tmpstd.find('"')]
 print(userid)
 
 ## we need an openapi to change password, by setting clicking (or hovering) on api button at the buttom
-command = ['curl', '-X', 'POST', f'http://media.yosefpor.com/emby/Users/{userid}/Password?api_key={key_emby}' , '-H', 'accept: */*',  '-H' , 'Content-Type: application/json' ,'-d' , '{' +f'"CurrentPw":"","NewPw":"{passwd}"' +'}']
+command = ['curl', '-X', 'POST', f'http://media.matmowitch.com/emby/Users/{userid}/Password?api_key={key_emby}' , '-H', 'accept: */*',  '-H' , 'Content-Type: application/json' ,'-d' , '{' +f'"CurrentPw":"","NewPw":"{passwd}"' +'}']
 #print(command)
 subprocess.Popen(command)
 
 #std_updated = std.replace('"IsHidden":false"','"IsHidden":true')
-#command= [ 'curl', '-H', 'Content-Type: application/json' , f'http://media.yosefpor.com/emby/Users/{userid}?api_key=7cc60997238a47929e707e5563efe6cd' , '-d' , std_updated ]
+#command= [ 'curl', '-H', 'Content-Type: application/json' , f'http://media.matmowitch.com/emby/Users/{userid}?api_key=7cc60997238a47929e707e5563efe6cd' , '-d' , std_updated ]
 
 
 #print('######################## scoold ########################')
 
-#command = [ 'curl' ,  'POST' , 'http://yosefpor.com:8000/signin/register', '-d', 'name=akbar', '-d', 'akbar@yosefpor.com', '-d' , 'passw=passIS3' , '-d' , 'leaveblank=""' , '-d' , 'timestamp=1575364315894']
+#command = [ 'curl' ,  'POST' , 'http://matmowitch.com:8000/signin/register', '-d', 'name=akbar', '-d', 'akbar@matmowitch.com', '-d' , 'passw=passIS3' , '-d' , 'leaveblank=""' , '-d' , 'timestamp=1575364315894']
 
 #(stdout , stderr)  = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
-

@@ -30,7 +30,7 @@ $wgMetaNamespace = "Yosefpor";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://yosefpor.com:9000";
+$wgServer = "http://matmowitch.com:9000";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -44,8 +44,8 @@ $wgLogo = "$wgResourceBasePath/resources/assets/wiki.png";
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "mohammad@yosefpor.com";
-$wgPasswordSender = "mohammad@yosefpor.com";
+$wgEmergencyContact = "mohammad@matmowitch.com";
+$wgPasswordSender = "mohammad@matmowitch.com";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
@@ -132,4 +132,3 @@ wfLoadSkin( 'Vector' );
 
 # End of automatically generated settings.
 # Add more configuration options below.
-
