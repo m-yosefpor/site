@@ -6,4 +6,6 @@ services:
     volumes:
       - ./data:/usr/share/nginx/html:ro
       - ./conf:/etc/nginx/conf.d:ro
+      - /etc/letsencrypt/live/chat.matmowitch.com/fullchain.pem:/etc/letsencrypt/live/chat.matmowitch.com/fullchain.pem
+      - /etc/letsencrypt/live/chat.matmowitch.com/privkey.pem:/etc/letsencrypt/live/chat.matmowitch.com/privkey.pem
     network_mode: "host"
